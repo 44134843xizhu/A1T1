@@ -1,0 +1,56 @@
+q1
+import pandas 
+f = open('/C:/Users/X/Desktop/acct890/assignmet1/twain.txt','r+')
+with open('twain.txt','rw') as f:
+   s = f.read()
+   s.replace('huck', 'HucK')
+   f.write(s)
+   
+q3
+year = int(input("input the year: "))
+if (year % 4) == 0:
+   if (year % 100) == 0 :
+       if (year % 400) == 0:
+           print("{0} is leap year".format(year))   
+       else:
+           print("{0} is not leap year".format(year))
+   else:
+       print("{0} is leap year".format(year))       
+else:
+   print("{0} is not leap year".format(year))
+   
+q4
+from random import *
+a = int(input("input the number a: "))
+b = int(input("input the number b: "))
+value = randint(a, b)
+print("The random integer number is",value)
+
+q5
+d = int(input("input the day: "))
+if m>=3 and m<=6:
+    if m==3 :
+        if d<20:
+            print('False')
+        else:
+            print('True')
+    else:
+        if m==6 :
+            if d>20:
+                print('False')
+            else:
+                print('True')
+        else:
+            print("True")
+else:
+    print('False')
+
+q6
+from math import *
+t = int(input("input the year: "))
+p = int(input("input the principal: "))
+r = float(input("input the interest rate: "))
+
+f=lambda t,p,r: p*pow(e, r*t)
+value=f(t,p,r)
+print("The desired value is",value)
